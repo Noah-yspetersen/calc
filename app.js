@@ -57,9 +57,22 @@ class Calculator {
         this.previousOperand = ''
     }
 
+
+    // 2 functions not working below
+    getDisplayNumber(number) {
+        const floatNumber = parseFloat(number)
+        if (isNaN(floatNumber)) return ''
+        return number.toLocalString('en')
+    }
+
     updateDisplay() {
-        this.currentOperandTextElement.innerText = this.currentOperand
-        this.previousOperandTextElement.innerText = this.previousOperand
+        this.currentOperandTextElement.innerText =
+            this.getDisplayNumber(this.currentOperand)
+        if (this.operation != null) {
+            this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+        } else {
+            this.previousOperandTextElement = ''
+        }
     }
 }
 
@@ -88,7 +101,6 @@ operationButtons.forEach(button => {
     })
 })
 
-// NOT WORKING
 equalsButton.addEventListener('click', button => {
     calculator.compute()
     calculator.updateDisplay()
