@@ -58,7 +58,7 @@ class Calculator {
     }
 
 
-    // 2 functions not working below
+    // 2 functions below not working
     getDisplayNumber(number) {
         const floatNumber = parseFloat(number)
         if (isNaN(floatNumber)) return ''
@@ -73,7 +73,7 @@ class Calculator {
         } else {
             this.previousOperandTextElement = ''
         }
-    }
+    } cnoqs
 }
 
 const numberButtons = document.querySelectorAll('[data-number]');
