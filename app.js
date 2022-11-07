@@ -73,7 +73,7 @@ class Calculator {
         } else {
             this.previousOperandTextElement = ''
         }
-    } cnoqs
+    }
 }
 
 const numberButtons = document.querySelectorAll('[data-number]');
