@@ -57,23 +57,25 @@ class Calculator {
         this.previousOperand = ''
     }
 
-
-    // 2 functions below not working
-    getDisplayNumber(number) {
-        const floatNumber = parseFloat(number)
-        if (isNaN(floatNumber)) return ''
-        return number.toLocalString('en')
-    }
-
     updateDisplay() {
-        this.currentOperandTextElement.innerText =
-            this.getDisplayNumber(this.currentOperand)
-        if (this.operation != null) {
-            this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
-        } else {
-            this.previousOperandTextElement = ''
-        }
+        this.currentOperandTextElement.innerText = this.currentOperand
+        this.previousOperandTextElement.innerText = this.previousOperand
     }
+    // getDisplayNumber(number) {
+    //     const floatNumber = parseFloat(number)
+    //     if (isNaN(floatNumber)) return ''
+    //     return number.toLocalString('en')
+    // }
+
+    // updateDisplay() {
+    //     this.currentOperandTextElement.innerText =
+    //         this.getDisplayNumber(this.currentOperand)
+    //     if (this.operation != null) {
+    //         this.previousOperandTextElement.innerText = `${this.getDisplayNumber(this.previousOperand)} ${this.operation}`
+    //     } else {
+    //         this.previousOperandTextElement = ''
+    //     }
+    // }
 }
 
 const numberButtons = document.querySelectorAll('[data-number]');
