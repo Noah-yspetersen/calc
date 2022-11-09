@@ -95,6 +95,8 @@ const allClearButton = document.querySelector('[data-all-clear]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
+const timeNow = document.querySelector('[data-time-now]')
+
 
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement)
 
